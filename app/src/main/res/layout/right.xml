@@ -5,15 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="#ff00ff"
+    android:background="#fff0"
     tools:context="bwie.com.todayheadline.MainActivity">
 
    <FrameLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:id="@+id/main"></FrameLayout>
+       android:id="@+id/right"></FrameLayout>
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
-       android:text="中间"/>
+       android:text="右边的"/>
 </RelativeLayout>
