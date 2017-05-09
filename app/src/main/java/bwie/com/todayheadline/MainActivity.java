@@ -11,7 +11,7 @@ import bwie.com.todayheadline.frag.LeftFragment;
 import bwie.com.todayheadline.frag.RightFragment;
 
 public class MainActivity extends SlidingFragmentActivity {
-
+//asdsadsadsad
     private SlidingMenu menu;
 
     @Override
