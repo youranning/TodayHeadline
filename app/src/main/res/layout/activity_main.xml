@@ -1,19 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-    android:background="#ff00ff"
+    android:orientation="vertical"
     tools:context="bwie.com.todayheadline.MainActivity">
 
-   <FrameLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/main"></FrameLayout>
-   <TextView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:text="中间"/>
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_above="@+id/main_group"
+        android:layout_weight="1">
+
+        <fragment
+            android:id="@+id/first"
+            android:name="bwie.com.todayheadline.frag.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/first" />
+
+        <fragment
+            android:id="@+id/head"
+            android:name="bwie.com.todayheadline.frag.HeadFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/head" />
+
+        <fragment
+            android:id="@+id/video"
+            android:name="bwie.com.todayheadline.frag.VideoFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/video" />
+
+        <fragment
+            android:id="@+id/login"
+            android:name="bwie.com.todayheadline.frag.LoginFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/login" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/main_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/main_first"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="首页"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/main_video"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="视频"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/main_head"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.04"
+            android:button="@null"
+            android:gravity="center"
+            android:text="微头条"
+            android:textSize="25sp" />
+
+        <RadioButton
+            android:id="@+id/main_login"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:text="未登录"
+            android:textSize="25sp" />
+    </RadioGroup>
+
+</LinearLayout>
