@@ -1,5 +1,6 @@
 package bwie.com.todayheadline.frag;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.view.LayoutInflater;
@@ -7,6 +8,12 @@ import android.view.ViewGroup;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.umeng.socialize.UMAuthListener;
+import com.umeng.socialize.UMShareAPI;
+import com.umeng.socialize.bean.SHARE_MEDIA;
+
+import java.util.Map;
 
 import bwie.com.todayheadline.R;
 
@@ -34,8 +41,38 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.login_qq:
-                Toast.makeText(getContext(),"dsadasdsa",Toast.LENGTH_SHORT).show();
+                login();
+
                 break;
         }
     }
+
+    private void login() {
+        UMShareAPI.get(getActivity()).getPlatformInfo(getActivity(), SHARE_MEDIA.QQ, new UMAuthListener() {
+            @Override
+            public void onStart(SHARE_MEDIA share_media) {
+
+            }
+
+            @Override
+            public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
+                String uid = map.get("uid");
+                String name = map.get("name");
+
+            }
+
+            @Override
+            public void onError(SHARE_MEDIA share_media, int i, Throwable throwable) {
+
+            }
+
+            @Override
+            public void onCancel(SHARE_MEDIA share_media, int i) {
+
+            }
+        });
+
+
+    }
+
 }

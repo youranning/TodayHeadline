@@ -1,5 +1,6 @@
 package bwie.com.todayheadline;
 
+import android.content.Intent;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.widget.RadioGroup;
 import com.bwei.slidingmenu.SlidingMenu;
 import com.bwei.slidingmenu.app.SlidingActivity;
 import com.bwei.slidingmenu.app.SlidingFragmentActivity;
+import com.umeng.socialize.UMShareAPI;
 
 import java.util.Map;
 
@@ -107,4 +109,11 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
 
         getSupportFragmentManager().beginTransaction().replace(R.id.right, rightMenuFragment).commit();
     }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        UMShareAPI.get(this).onActivityResult(requestCode, resultCode, data);
+
+    }
+
 }
