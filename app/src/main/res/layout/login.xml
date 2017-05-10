@@ -18,27 +18,35 @@
             android:textSize="25sp" />
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
-
             android:layout_width="0dp"
+
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
             android:text="微信" />
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
-
             android:layout_width="0dp"
+
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
             android:text="新浪" />
 
         <ImageView
-            android:src="@mipmap/ic_launcher"
-
             android:layout_width="0dp"
+
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:src="@mipmap/ic_launcher"
             android:text="new" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/login_more"
+        android:text="更多登录方式"
+        android:textSize="25sp" />
 </LinearLayout>

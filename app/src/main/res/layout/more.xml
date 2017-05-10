@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/phone"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号"/>
+        <Button
+            android:id="@+id/more_btnMessage"
+            android:background="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送验证码"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入验证码"/>
+
+    <Button
+        android:id="@+id/more_come"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进入头条"/>
+
+</LinearLayout>

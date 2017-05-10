@@ -17,6 +17,7 @@ import com.umeng.socialize.bean.SHARE_MEDIA;
 import java.util.Map;
 
 import bwie.com.todayheadline.R;
+import bwie.com.todayheadline.activity.MoreActivity;
 
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
@@ -35,6 +36,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
         qq = (ImageView) view.findViewById(R.id.login_qq);
         qq.setOnClickListener(this);
+        view.findViewById(R.id.login_more).setOnClickListener(this);
 
     }
 
@@ -45,7 +47,16 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
                 login();
 
                 break;
+            case R.id.login_more:
+                more();
+                break;
         }
+    }
+
+    private void more() {
+        Intent intent=new Intent(getActivity(), MoreActivity.class);
+        startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.come, R.anim.out);
     }
 
     private void login() {
