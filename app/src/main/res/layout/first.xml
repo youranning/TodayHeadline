@@ -2,10 +2,31 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     >
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textSize="25sp"
-    android:text="首页"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="72dp"
+        android:src="@drawable/search_background"
+        />
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        >
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/first_tab"
+
+            ></android.support.design.widget.TabLayout>
+
+    </HorizontalScrollView>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/first_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
 </LinearLayout>
