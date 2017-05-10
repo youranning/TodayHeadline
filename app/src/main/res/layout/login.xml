@@ -9,24 +9,36 @@
         android:layout_height="150dp"
         android:orientation="horizontal">
 
-        <Button
+        <ImageView
             android:id="@+id/login_qq"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="qq"
-            android:textSize="25sp"/>
+            android:src="@mipmap/ic_launcher"
+            android:textSize="25sp" />
 
-        <Button
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="微信" />
 
-        <Button
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="新浪" />
+
+        <ImageView
+            android:src="@mipmap/ic_launcher"
+
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="new" />
     </LinearLayout>
 </LinearLayout>

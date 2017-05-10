@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.umeng.socialize.UMAuthListener;
@@ -21,7 +22,7 @@ import bwie.com.todayheadline.R;
 public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
-    private Button qq;
+    private ImageView qq;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -32,7 +33,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        qq = (Button) view.findViewById(R.id.login_qq);
+        qq = (ImageView) view.findViewById(R.id.login_qq);
         qq.setOnClickListener(this);
 
     }
