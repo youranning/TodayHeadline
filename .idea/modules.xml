@@ -3,16 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TodayHeadline.iml" filepath="$PROJECT_DIR$/TodayHeadline.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TodayHeadline.iml" filepath="$PROJECT_DIR$/TodayHeadline.iml" />
-      <module fileurl="file://$PROJECT_DIR$/TodayHeadline.iml" filepath="$PROJECT_DIR$/TodayHeadline.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/slidingmenu/slidingmenu.iml" filepath="$PROJECT_DIR$/slidingmenu/slidingmenu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/slidingmenu/slidingmenu.iml" filepath="$PROJECT_DIR$/slidingmenu/slidingmenu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/slidingmenu/slidingmenu.iml" filepath="$PROJECT_DIR$/slidingmenu/slidingmenu.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xlistview/xlistview.iml" filepath="$PROJECT_DIR$/xlistview/xlistview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/xlistview/xlistview.iml" filepath="$PROJECT_DIR$/xlistview/xlistview.iml" />
       <module fileurl="file://$PROJECT_DIR$/xlistview/xlistview.iml" filepath="$PROJECT_DIR$/xlistview/xlistview.iml" />
     </modules>
   </component>
