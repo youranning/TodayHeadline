@@ -136,60 +136,134 @@
 
 
 
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
     <Button
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:gravity="left"
         android:background="#ffffff"
         android:text="消息通知"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_msg"/>
 
+    <ImageView
+        android:background="#ffffff"
+        android:layout_marginTop="19dp"
+        android:padding="10dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/name_arrow_night"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
     <Button
+        android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
         android:background="#ffffff"
-        android:text="头条商城                  邀请好友得200元现金奖励"
-        android:layout_width="match_parent"
+        android:text="头条商城         邀请好友得200元现金奖励"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_shop"/>
 
+    <ImageView
+        android:background="#ffffff"
+        android:layout_marginTop="19dp"
+        android:padding="10dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/name_arrow_night"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
     <Button
+        android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
         android:background="#ffffff"
-        android:text="京东特供                             新人领188元红包"
-        android:layout_width="match_parent"
+        android:text="京东特供                          新人领188元红包"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_jd"/>
-
+        <ImageView
+            android:background="#ffffff"
+            android:layout_marginTop="13dp"
+            android:padding="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/name_arrow_night"/>
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal">
     <Button
+        android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
         android:background="#ffffff"
         android:text="我要爆料"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_bl"/>
-
+            <ImageView
+                android:background="#ffffff"
+                android:layout_marginTop="12dp"
+                android:padding="10dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/name_arrow_night"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
     <Button
+        android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
         android:background="#ffffff"
         android:text="用户反馈"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_user"/>
-
+                <ImageView
+                    android:background="#ffffff"
+                    android:layout_marginTop="12dp"
+                    android:padding="10dp"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/name_arrow_night"/>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
     <Button
+        android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
         android:background="#ffffff"
         android:text="系统设置"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_setting"/>
-
+                    <ImageView
+                        android:background="#ffffff"
+                        android:layout_marginTop="12dp"
+                        android:padding="10dp"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@drawable/name_arrow_night"/>
+                </LinearLayout>
 </LinearLayout>
