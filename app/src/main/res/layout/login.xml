@@ -4,49 +4,192 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
+        android:background="@drawable/my_page_background"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:orientation="horizontal">
+        android:layout_height="160dp"
+        >
 
         <ImageView
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
             android:id="@+id/login_qq"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
-            android:textSize="25sp" />
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/ic_drawer_qzone"
+            />
 
         <ImageView
-            android:layout_width="0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_drawer_tencent"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
 
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
-            android:text="微信" />
-
-        <ImageView
-            android:layout_width="0dp"
-
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
-            android:text="新浪" />
+            />
 
         <ImageView
-            android:layout_width="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_drawer_weibo"
+            android:layout_width="70dp"
+            android:layout_height="70dp" />
 
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:src="@mipmap/ic_launcher"
-            android:text="new" />
-    </LinearLayout>
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="120dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/wiper_switch_off_btn" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/login_more"
-        android:text="更多登录方式"
-        android:textSize="25sp" />
+        <TextView
+            android:id="@+id/login_more"
+            android:clickable="true"
+            android:textSize="10sp"
+            android:textColor="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="130dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="更多登陆方式"/>
+        <ImageView
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="129dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/name_arrow_night"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_marginLeft="30dp"
+            android:layout_alignParentLeft="true"
+            android:background="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/favoriteicon_profile"
+            />
+        <TextView
+            android:textSize="15sp"
+            android:layout_marginLeft="38dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            />
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:background="#ffffff"
+            android:layout_centerHorizontal="true"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/new_review_tabbar"
+            />
+        <TextView
+            android:textSize="15sp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:text="历史"
+            />
+
+        <ImageButton
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:layout_marginRight="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/nighticon_profile"
+            />
+        <TextView
+            android:textSize="15sp"
+            android:layout_marginTop="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="38dp"
+            android:text="夜间"
+            />
+    </RelativeLayout>
+
+
+
+
+    <Button
+        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="#ffffff"
+        android:text="消息通知"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bt_msg"/>
+
+    <Button
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="#ffffff"
+        android:text="头条商城                  邀请好友得200元现金奖励"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bt_shop"/>
+
+    <Button
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="#ffffff"
+        android:text="京东特供                             新人领188元红包"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bt_jd"/>
+
+    <Button
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="#ffffff"
+        android:text="我要爆料"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bt_bl"/>
+
+    <Button
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="#ffffff"
+        android:text="用户反馈"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bt_user"/>
+
+    <Button
+        android:padding="10dp"
+        android:gravity="left"
+        android:background="#ffffff"
+        android:text="系统设置"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/bt_setting"/>
+
 </LinearLayout>
