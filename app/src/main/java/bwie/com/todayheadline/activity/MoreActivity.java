@@ -10,17 +10,22 @@ import org.xutils.common.Callback;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 import bwie.com.todayheadline.R;
 
 public class MoreActivity extends Activity implements View.OnClickListener {
-
+    private Button more_btnMessage;
+    private TimerTask task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.more);
 
-        findViewById(R.id.more_btnMessage).setOnClickListener(this);
+        more_btnMessage = (Button) findViewById(R.id.more_btnMessage);
+        more_btnMessage .setOnClickListener(this);
         findViewById(R.id.more_come).setOnClickListener(this);
     }
 
@@ -47,9 +52,11 @@ public class MoreActivity extends Activity implements View.OnClickListener {
 
     private void login() {
 //        http://qhb.2dyt.com/Bwei/login?username=110110&password=1234&postkey=1503d
+        String phone = getPhone().getText().toString().trim();
+        String pwd = getPwd().getText().toString().trim();
         RequestParams login = new RequestParams("http://qhb.2dyt.com/Bwei/login");
-        login.addBodyParameter("username", "110110");
-        login.addBodyParameter("password", "1234");
+        login.addBodyParameter("username", phone);
+        login.addBodyParameter("password", pwd);
         login.addBodyParameter("postkey", "1503d");
         x.http().get(login, new Callback.CommonCallback<String>() {
             @Override
@@ -75,8 +82,11 @@ public class MoreActivity extends Activity implements View.OnClickListener {
     }
 
     private void reist() {
+        String phone = getPhone().getText().toString().trim();
+
+
         RequestParams parms = new RequestParams("http://qhb.2dyt.com/Bwei/register");
-        parms.addBodyParameter("phone", "110110");
+        parms.addBodyParameter("phone", phone);
         parms.addBodyParameter("password", "1234");
         parms.addBodyParameter("postkey", "1503d");
 //        1 register
@@ -104,5 +114,31 @@ public class MoreActivity extends Activity implements View.OnClickListener {
 
             }
         });
+        addTime();
+
+    }
+    int time=10;
+
+    private void addTime() {
+        final Timer timer =new Timer();
+        task = new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (time>=0){
+                            more_btnMessage.setText("重新发送:("+time--+"s)");
+                        }else {
+                            timer.cancel();
+                            more_btnMessage.setText("重新发送");
+
+                            time=10;
+                        }
+                    }
+                });
+            }
+        };
+        timer.schedule(task,0,1000);
     }
 }

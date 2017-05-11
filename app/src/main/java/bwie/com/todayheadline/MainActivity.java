@@ -48,7 +48,8 @@ public class MainActivity extends SlidingFragmentActivity implements View.OnClic
         head = (HeadFragment) manager.findFragmentById(R.id.head);
         video = (VideoFragment) manager.findFragmentById(R.id.video);
         login = (LoginFragment) manager.findFragmentById(R.id.login);
-        manager.beginTransaction().hide(head).hide(video).hide(first).show(login).commit();
+        manager.beginTransaction().hide(head).hide(video).hide(login).show(first).commit();
+
 
     }
 
