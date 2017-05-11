@@ -32,10 +32,6 @@ public class MoreActivity extends Activity implements View.OnClickListener {
         return (EditText) findViewById(R.id.pwd);
     }
 
-
-
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()) {

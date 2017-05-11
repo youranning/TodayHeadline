@@ -24,6 +24,7 @@ public class FirstAdapter extends FragmentPagerAdapter{
         Fragment fragment=new FirstTabFragment();
 
         return fragment;
+
     }
 
     @Override

@@ -39,12 +39,8 @@ public class FirstFragment extends Fragment  {
         first_pager.setAdapter(adapter);
 
         first_tab.setupWithViewPager(first_pager);
-
         first_tab.setTabTextColors(Color.BLACK,Color.RED);
-
-
         first_tab.setSelectedTabIndicatorColor(Color.RED);
-
         first_tab.setTabMode(TabLayout.MODE_FIXED);
 
     }
