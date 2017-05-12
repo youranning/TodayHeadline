@@ -19,6 +19,7 @@ import bwie.com.todayheadline.service.PushService;
 public class MyApplication extends Application {
     @Override
     public void onCreate() {
+
         super.onCreate();
         PushManager.getInstance().registerPushIntentService(this, ClientSeriver.class);
         PushManager.getInstance().initialize(this, PushService.class);
