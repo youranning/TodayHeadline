@@ -2,11 +2,15 @@ package bwie.com.todayheadline;
 
 import android.app.Application;
 
+import com.igexin.sdk.PushManager;
 import com.umeng.socialize.Config;
 import com.umeng.socialize.PlatformConfig;
 import com.umeng.socialize.UMShareAPI;
 
 import org.xutils.x;
+
+import bwie.com.todayheadline.service.ClientSeriver;
+import bwie.com.todayheadline.service.PushService;
 
 /**
  * Created by $USER_NAME on 2017/5/9.
@@ -16,6 +20,8 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        PushManager.getInstance().registerPushIntentService(this, ClientSeriver.class);
+        PushManager.getInstance().initialize(this, PushService.class);
         x.Ext.init(this);
         Config.DEBUG = true;
         UMShareAPI.get(this);

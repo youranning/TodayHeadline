@@ -64,10 +64,10 @@ public class FirstTabFragment extends Fragment implements ResponseListener {
     public void onSuccess(String string) {
 
         Gson gson=new Gson();
-        TuijianBean tuiJian = gson.fromJson(string,  TuijianBean.class);
-        List<TuijianBean.DataBean> data = tuiJian.getData();
-        glist.addAll(data);
-        adapter.notifyDataSetChanged();
+       TuijianBean tuiJian = gson.fromJson(string,  TuijianBean.class);
+       List<TuijianBean.DataBean> data = tuiJian.getData();
+      glist.addAll(data);
+      adapter.notifyDataSetChanged();
 
     }
 

@@ -10,13 +10,21 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        manifestPlaceholders = [
+                GETUI_APP_ID : "WQENOUsLQH6spCGxdCQVr4",
+                GETUI_APP_KEY : "8pi67WXxnOAbqULGk8AR21",
+                GETUI_APP_SECRET : "F8jrZhu13s9mgGG9OTBN85"
+        ]
+
     }
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+
 }
 
 dependencies {
@@ -31,4 +39,7 @@ dependencies {
     compile 'com.android.support:support-v4:25.2.0'
     compile project(':xlistview')
     compile 'com.google.code.gson:gson:2.6.2'
+     compile files('libs/GetuiSDK2.10.2.0.jar')
+
+
 }
