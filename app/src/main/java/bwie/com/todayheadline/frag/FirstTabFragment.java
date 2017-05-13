@@ -56,6 +56,7 @@ public class FirstTabFragment extends Fragment implements ResponseListener {
 
     private void getSpringView() {
         tab_sp.setListener(new SpringView.OnFreshListener() {
+
             @Override
             public void onRefresh() {
                 glist.clear();
