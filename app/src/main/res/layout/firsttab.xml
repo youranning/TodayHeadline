@@ -5,11 +5,19 @@
 
     >
 
-    <xunqaing.bwie.com.xlistview.XListView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tab_xView"
-        ></xunqaing.bwie.com.xlistview.XListView>
+    <com.liaoinstan.springview.widget.SpringView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:id="@+id/tab_sp"
+        >
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tab_lv"
+            ></ListView>
+
+    </com.liaoinstan.springview.widget.SpringView>
+
 
 
 

@@ -70,21 +70,16 @@ public class IAsyncTask extends AsyncTask<String,Void,String>{
         super.onPostExecute(result);
 
         if(listener != null){
-
-
             if(TextUtils.isEmpty(result)){
                 //回调失败
                 listener.onFail();
             }else{
                 // 回调成功
-
                 listener.onSuccess(result);
             }
         } else {
             listener.onFail();
         }
-
-
 
     }
     @Override
@@ -94,6 +89,4 @@ public class IAsyncTask extends AsyncTask<String,Void,String>{
             listener.onFail();
         }
     }
-
-
 }
