@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -14,8 +16,11 @@ import com.umeng.socialize.UMAuthListener;
 import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 
+import org.greenrobot.eventbus.EventBus;
+
 import java.util.Map;
 
+import bwie.com.todayheadline.MyEvENT;
 import bwie.com.todayheadline.R;
 import bwie.com.todayheadline.activity.MoreActivity;
 
@@ -24,6 +29,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
 
     private ImageView qq;
+    private CheckBox night_button;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,9 +41,30 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         qq = (ImageView) view.findViewById(R.id.login_qq);
+        night_button = (CheckBox) view.findViewById(R.id.night_button);
+        setNight();
         qq.setOnClickListener(this);
         view.findViewById(R.id.login_more).setOnClickListener(this);
 
+    }
+
+    private void setNight() {
+        night_button.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    night_button.setText("护眼模式");
+
+                } else {
+                    night_button.setText("正常模式");
+                }
+
+                EventBus.getDefault().post(new MyEvENT(isChecked));
+
+            }
+
+
+        });
     }
 
     @Override
@@ -54,7 +81,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     }
 
     private void more() {
-        Intent intent=new Intent(getActivity(), MoreActivity.class);
+        Intent intent = new Intent(getActivity(), MoreActivity.class);
         startActivity(intent);
         getActivity().overridePendingTransition(R.anim.come, R.anim.out);
     }
