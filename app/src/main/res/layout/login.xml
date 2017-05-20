@@ -52,7 +52,6 @@
             android:id="@+id/login_more"
             android:clickable="true"
             android:textSize="10sp"
-            android:textColor="#ffffff"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="130dp"
             android:layout_width="wrap_content"
@@ -68,16 +67,16 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:background="#ffffff"
+
         android:layout_width="match_parent"
         android:layout_height="80dp">
 
-        <ImageButton
+        <ImageView
             android:layout_marginTop="10dp"
             android:padding="10dp"
             android:layout_marginLeft="30dp"
             android:layout_alignParentLeft="true"
-            android:background="#ffffff"
+
             android:layout_centerHorizontal="true"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -94,10 +93,10 @@
             android:text="收藏"
             />
 
-        <ImageButton
+        <ImageView
             android:layout_marginTop="10dp"
             android:padding="10dp"
-            android:background="#ffffff"
+
             android:layout_centerHorizontal="true"
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -109,19 +108,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="60dp"
+
             android:text="历史"
             />
 
         <CheckBox
+            android:layout_marginTop="18dp"
             android:checked="true"
             android:id="@+id/night_button"
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:button="@null"
-            android:drawablePadding="10dp"
+            android:drawablePadding="8dp"
             android:drawableTop="@drawable/select"
             android:gravity="center"
-            android:text="护眼模式"
+            android:text="夜间模式"
+            android:layout_marginRight="10dp"
             android:textSize="15sp"
             android:layout_alignParentRight="true"
             />
@@ -129,22 +131,29 @@
 
 
 
+
+
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
-    <Button
+
+
+    <TextView
+        android:clickable="true"
         android:layout_marginTop="15dp"
         android:padding="10dp"
         android:gravity="left"
-        android:background="#ffffff"
+        android:textSize="20dp"
         android:text="消息通知"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_msg"/>
 
     <ImageView
-        android:background="#ffffff"
+
         android:layout_marginTop="19dp"
         android:padding="10dp"
         android:layout_width="35dp"
@@ -156,18 +165,20 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
-    <Button
+    <TextView
+        android:textSize="20dp"
+        android:clickable="true"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
-        android:background="#ffffff"
-        android:text="头条商城         邀请好友得200元现金奖励"
+
+        android:text="头条商城"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_shop"/>
 
     <ImageView
-        android:background="#ffffff"
+
         android:layout_marginTop="19dp"
         android:padding="10dp"
         android:layout_width="35dp"
@@ -179,17 +190,18 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
-    <Button
+    <TextView
+        android:textSize="20dp"
+        android:clickable="true"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
-        android:background="#ffffff"
-        android:text="京东特供                          新人领188元红包"
+        android:text="京东特供"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_jd"/>
         <ImageView
-            android:background="#ffffff"
+
             android:layout_marginTop="13dp"
             android:padding="10dp"
             android:layout_width="35dp"
@@ -200,17 +212,18 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:orientation="horizontal">
-    <Button
+    <TextView
+        android:textSize="20dp"
+        android:clickable="true"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
-        android:background="#ffffff"
         android:text="我要爆料"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_bl"/>
             <ImageView
-                android:background="#ffffff"
+
                 android:layout_marginTop="12dp"
                 android:padding="10dp"
                 android:layout_width="35dp"
@@ -221,17 +234,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">
-    <Button
+    <TextView
+        android:textSize="20dp"
+        android:clickable="true"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
-        android:background="#ffffff"
+
         android:text="用户反馈"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_user"/>
                 <ImageView
-                    android:background="#ffffff"
+
                     android:layout_marginTop="12dp"
                     android:padding="10dp"
                     android:layout_width="35dp"
@@ -242,21 +257,24 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:orientation="horizontal">
-    <Button
+    <TextView
+        android:textSize="20dp"
+        android:clickable="true"
         android:layout_marginTop="10dp"
         android:padding="10dp"
         android:gravity="left"
-        android:background="#ffffff"
         android:text="系统设置"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:id="@+id/bt_setting"/>
                     <ImageView
-                        android:background="#ffffff"
                         android:layout_marginTop="12dp"
                         android:padding="10dp"
                         android:layout_width="35dp"
                         android:layout_height="35dp"
                         android:src="@drawable/name_arrow_night"/>
                 </LinearLayout>
+
+
+
 </LinearLayout>

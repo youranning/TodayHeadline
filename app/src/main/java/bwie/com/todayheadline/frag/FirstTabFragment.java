@@ -12,6 +12,11 @@ import com.google.gson.Gson;
 import com.liaoinstan.springview.container.DefaultFooter;
 import com.liaoinstan.springview.container.DefaultHeader;
 import com.liaoinstan.springview.widget.SpringView;
+
+import org.xutils.common.Callback;
+import org.xutils.http.RequestParams;
+import org.xutils.x;
+
 import java.util.ArrayList;
 import java.util.List;
 import bwie.com.todayheadline.R;
@@ -26,7 +31,7 @@ import bwie.com.todayheadline.utils.Urls;
  * Created by Administrator on 2017/5/10.
  */
 
-public class FirstTabFragment extends Fragment implements ResponseListener {
+public class FirstTabFragment extends Fragment {
 
     List<TuijianBean.DataBean> glist=new ArrayList<>();
 
@@ -75,24 +80,38 @@ public class FirstTabFragment extends Fragment implements ResponseListener {
         });
     }
     private void getData() {
-        String path= Urls.tuijian;
-        new IAsyncTask(this).execute(path);
+
+        RequestParams requestParams=new RequestParams(Urls.tuijian);
+        x.http().post(requestParams, new Callback.CommonCallback<String>() {
+            @Override
+            public void onSuccess(String result) {
+                Gson gson=new Gson();
+                TuijianBean tuiJian = gson.fromJson(result,  TuijianBean.class);
+                List<TuijianBean.DataBean> data = tuiJian.getData();
+                glist.addAll(data);
+                adapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onError(Throwable ex, boolean isOnCallback) {
+
+            }
+
+            @Override
+            public void onCancelled(CancelledException cex) {
+
+            }
+
+            @Override
+            public void onFinished() {
+
+            }
+        });
+
     }
 
 
-    @Override
-    public void onSuccess(String string) {
 
-       Gson gson=new Gson();
-       TuijianBean tuiJian = gson.fromJson(string,  TuijianBean.class);
-       List<TuijianBean.DataBean> data = tuiJian.getData();
-       glist.addAll(data);
-       adapter.notifyDataSetChanged();
 
-    }
 
-    @Override
-    public void onFail() {
-
-    }
 }
