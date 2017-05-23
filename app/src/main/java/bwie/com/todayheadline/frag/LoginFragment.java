@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.umeng.socialize.UMAuthListener;
@@ -17,12 +20,15 @@ import com.umeng.socialize.UMShareAPI;
 import com.umeng.socialize.bean.SHARE_MEDIA;
 
 import org.greenrobot.eventbus.EventBus;
+import org.xutils.x;
 
 import java.util.Map;
 
+import bwie.com.todayheadline.MyApplication;
 import bwie.com.todayheadline.MyEvENT;
 import bwie.com.todayheadline.R;
 import bwie.com.todayheadline.activity.MoreActivity;
+import bwie.com.todayheadline.activity.Settting;
 
 
 public class LoginFragment extends Fragment implements View.OnClickListener {
@@ -30,6 +36,10 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
     private ImageView qq;
     private CheckBox night_button;
+    private ImageView iv_head;
+    private TextView tv_name;
+    private RelativeLayout relativeLayout;
+    private LinearLayout linearLayout;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -45,7 +55,22 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
         setNight();
         qq.setOnClickListener(this);
         view.findViewById(R.id.login_more).setOnClickListener(this);
+        tv_name = (TextView) view.findViewById(R.id.success_name);
+        iv_head = (ImageView) view.findViewById(R.id.success_head);
+        relativeLayout = (RelativeLayout) view.findViewById(R.id.login_fail);
+        linearLayout = (LinearLayout) view.findViewById(R.id.login_success);
+view.findViewById(R.id.bt_setting).setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        setting();
+    }
+});
 
+    }
+
+    private void setting() {
+        Intent intent=new Intent(getActivity(), Settting.class);
+        startActivity(intent);
     }
 
     private void setNight() {
@@ -87,6 +112,7 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
     }
 
     private void login() {
+
         UMShareAPI.get(getActivity()).getPlatformInfo(getActivity(), SHARE_MEDIA.QQ, new UMAuthListener() {
             @Override
             public void onStart(SHARE_MEDIA share_media) {
@@ -95,9 +121,14 @@ public class LoginFragment extends Fragment implements View.OnClickListener {
 
             @Override
             public void onComplete(SHARE_MEDIA share_media, int i, Map<String, String> map) {
-                String uid = map.get("uid");
                 String name = map.get("name");
+                String iconurl=map.get("iconurl");
 
+                tv_name.setText(name);
+
+                x.image().bind(iv_head,iconurl, MyApplication.display(true));
+                relativeLayout.setVisibility(View.GONE);
+                linearLayout.setVisibility(View.VISIBLE);
             }
 
             @Override

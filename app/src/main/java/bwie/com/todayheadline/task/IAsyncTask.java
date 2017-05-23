@@ -34,7 +34,7 @@ public class IAsyncTask extends AsyncTask<String,Void,String>{
     protected String doInBackground(String... params) {
 
         String result = "" ;
-        String path = params[0] ;
+      /*  String path = params[0] ;
         InputStream inputStream = null ;
         if(TextUtils.isEmpty(path)){
             return result;
@@ -59,9 +59,9 @@ public class IAsyncTask extends AsyncTask<String,Void,String>{
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-            }
+            }*/
             return  result ;
-        }
+//        }
 
     }
 

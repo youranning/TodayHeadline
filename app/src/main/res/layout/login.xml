@@ -4,259 +4,288 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:background="@drawable/my_page_background"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="160dp"
-        >
+        android:layout_height="match_parent">
 
-        <ImageView
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="30dp"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_vertical"
-            android:id="@+id/login_qq"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:src="@drawable/ic_drawer_qzone"
-            />
-
-        <ImageView
-            android:layout_centerHorizontal="true"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_drawer_tencent"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-
-            />
-
-        <ImageView
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="30dp"
-            android:layout_centerInParent="true"
-            android:layout_gravity="center_vertical"
-            android:src="@drawable/ic_drawer_weibo"
-            android:layout_width="70dp"
-            android:layout_height="70dp" />
-
-        <ImageView
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="120dp"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-            android:src="@drawable/wiper_switch_off_btn" />
-
-        <TextView
-            android:id="@+id/login_more"
-            android:clickable="true"
-            android:textSize="10sp"
-            android:textColor="#ffffff"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="130dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="更多登陆方式"/>
-        <ImageView
-            android:layout_marginLeft="220dp"
-            android:layout_marginTop="129dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/name_arrow_night"/>
-
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:background="#ffffff"
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
-
-        <ImageButton
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:layout_marginLeft="30dp"
-            android:layout_alignParentLeft="true"
-            android:background="#ffffff"
-            android:layout_centerHorizontal="true"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/favoriteicon_profile"
-            />
-        <TextView
-            android:textSize="15sp"
-            android:layout_marginLeft="38dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginBottom="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="收藏"
-            />
-
-        <ImageButton
-            android:layout_marginTop="10dp"
-            android:padding="10dp"
-            android:background="#ffffff"
-            android:layout_centerHorizontal="true"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/new_review_tabbar"
-            />
-        <TextView
-            android:textSize="15sp"
-            android:layout_centerHorizontal="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:text="历史"
-            />
-
-        <CheckBox
-            android:checked="true"
-            android:id="@+id/night_button"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:button="@null"
-            android:drawablePadding="10dp"
-            android:drawableTop="@drawable/select"
-            android:gravity="center"
-            android:text="护眼模式"
-            android:textSize="15sp"
-            android:layout_alignParentRight="true"
-            />
-    </RelativeLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-    <Button
-        android:layout_marginTop="15dp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="#ffffff"
-        android:text="消息通知"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:id="@+id/bt_msg"/>
-
-    <ImageView
-        android:background="#ffffff"
-        android:layout_marginTop="19dp"
-        android:padding="10dp"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/name_arrow_night"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-    <Button
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="#ffffff"
-        android:text="头条商城         邀请好友得200元现金奖励"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:id="@+id/bt_shop"/>
-
-    <ImageView
-        android:background="#ffffff"
-        android:layout_marginTop="19dp"
-        android:padding="10dp"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:src="@drawable/name_arrow_night"/>
-</LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-    <Button
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="#ffffff"
-        android:text="京东特供                          新人领188元红包"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:id="@+id/bt_jd"/>
-        <ImageView
-            android:background="#ffffff"
-            android:layout_marginTop="13dp"
-            android:padding="10dp"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
-            android:src="@drawable/name_arrow_night"/>
-    </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal">
-    <Button
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="#ffffff"
-        android:text="我要爆料"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:id="@+id/bt_bl"/>
-            <ImageView
-                android:background="#ffffff"
-                android:layout_marginTop="12dp"
-                android:padding="10dp"
-                android:layout_width="35dp"
-                android:layout_height="35dp"
-                android:src="@drawable/name_arrow_night"/>
-        </LinearLayout>
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <include
+
+                layout="@layout/login_success"
+                android:visibility="gone" />
+
+            <RelativeLayout
+
+                android:id="@+id/login_fail"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/my_page_background">
+
+                <ImageView
+                    android:id="@+id/login_qq"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30dp"
+                    android:src="@drawable/ic_drawer_qzone" />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_drawer_tencent"
+
+                    />
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="30dp"
+                    android:src="@drawable/ic_drawer_weibo" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="120dp"
+                    android:src="@drawable/wiper_switch_off_btn" />
+
+                <TextView
+                    android:id="@+id/login_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="130dp"
+                    android:clickable="true"
+                    android:text="更多登陆方式"
+                    android:textColor="#ffffff"
+                    android:textSize="10sp" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="220dp"
+                    android:layout_marginTop="129dp"
+                    android:src="@drawable/name_arrow_night" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="#ffffff">
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/favoriteicon_profile" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginLeft="38dp"
+                    android:layout_marginTop="60dp"
+                    android:text="收藏"
+                    android:textSize="15sp" />
+
+                <ImageButton
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/new_review_tabbar" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="60dp"
+                    android:text="历史"
+                    android:textSize="15sp" />
+
+                <CheckBox
+                    android:id="@+id/night_button"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_alignParentRight="true"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawablePadding="10dp"
+                    android:drawableTop="@drawable/select"
+                    android:gravity="center"
+
+                    android:text="护眼模式"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal">
-    <Button
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="#ffffff"
-        android:text="用户反馈"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:id="@+id/bt_user"/>
-                <ImageView
+
+                <Button
+                    android:id="@+id/bt_shop"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
                     android:background="#ffffff"
-                    android:layout_marginTop="12dp"
+                    android:gravity="left"
                     android:padding="10dp"
+                    android:text="头条商城         邀请好友得200元现金奖励" />
+
+                <ImageView
                     android:layout_width="35dp"
                     android:layout_height="35dp"
-                    android:src="@drawable/name_arrow_night"/>
+                    android:layout_marginTop="19dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/name_arrow_night" />
             </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_msg"
+                    android:layout_width="350dp"
                     android:layout_height="50dp"
-                    android:orientation="horizontal">
-    <Button
-        android:layout_marginTop="10dp"
-        android:padding="10dp"
-        android:gravity="left"
-        android:background="#ffffff"
-        android:text="系统设置"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:id="@+id/bt_setting"/>
-                    <ImageView
-                        android:background="#ffffff"
-                        android:layout_marginTop="12dp"
-                        android:padding="10dp"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
-                        android:src="@drawable/name_arrow_night"/>
-                </LinearLayout>
+                    android:layout_marginTop="15dp"
+                    android:background="#ffffff"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="消息通知" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="19dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/name_arrow_night" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_jd"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="京东特供                          新人领188元红包" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="13dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/name_arrow_night" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_bl"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="我要爆料" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/name_arrow_night" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_user"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="用户反馈" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/name_arrow_night" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/bt_setting"
+                    android:layout_width="350dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#ffffff"
+                    android:gravity="left"
+                    android:padding="10dp"
+                    android:text="系统设置" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#ffffff"
+                    android:padding="10dp"
+                    android:src="@drawable/name_arrow_night" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

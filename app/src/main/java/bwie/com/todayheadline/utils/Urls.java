@@ -66,7 +66,7 @@ public class Urls {
     //
 
 
-
+    public static final String arr[]={tuijian,redian,bendi,shipin,shehui,yule,keji,qiche,tiyu,caijin,junshi,guoji,duanzi,qutu,jiankang,meinv};
 
 
 

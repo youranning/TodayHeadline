@@ -38,7 +38,7 @@ public class SpringAdapter extends BaseAdapter {
     }
     @Override
     public int getCount() {
-        return glist.size();
+        return glist!=null?glist.size():0;
     }
 
     @Override
