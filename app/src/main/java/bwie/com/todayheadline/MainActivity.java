@@ -2,15 +2,19 @@ package bwie.com.todayheadline;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.graphics.PixelFormat;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 import com.bwei.slidingmenu.SlidingMenu;
 import com.bwei.slidingmenu.app.SlidingActivity;
@@ -44,7 +48,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private HeadFragment head;
     private LoginFragment login;
     private VideoFragment video;
-
+    private LinearLayout linearLayout;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +58,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         initView();
         initGrayBackgroud();
         manager = getSupportFragmentManager();
+        linearLayout= (LinearLayout) this.findViewById(R.id.activity_main);
         first = (FirstFragment) manager.findFragmentById(R.id.first);
         head = (HeadFragment) manager.findFragmentById(R.id.head);
         video = (VideoFragment) manager.findFragmentById(R.id.video);
@@ -98,7 +103,9 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         //对所有的控件取出,设置对应的图片
 //        setView();
         //更改字体颜色
-//        switchTextViewColor((ViewGroup) getWindow().getDecorView(),event.isWhite());
+          switchTextViewColor((ViewGroup) getWindow().getDecorView(),event.isNight());
+        boolean changeMode = event.isNight();
+        changeMode(changeMode);
 //
 //        IndexFragment indexFragment = (IndexFragment) list.get(0);
 //
@@ -169,4 +176,41 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     }
 
+    private void changeMode(boolean white) {
+
+        if (white) {
+            linearLayout.setBackgroundColor(Color.WHITE);
+        } else {
+            linearLayout.setBackgroundColor(Color.BLACK);
+        }
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    public void switchTextViewColor(ViewGroup view, boolean white) {
+//        getChildCount 获取ViewGroup下view的个数
+//        view.getChildAt(i) 根据下标获取对应的子view
+        for (int i = 0; i < view.getChildCount(); i++) {
+            if (view.getChildAt(i) instanceof ViewGroup) {
+                switchTextViewColor((ViewGroup) view.getChildAt(i), white);
+            } else if (view.getChildAt(i) instanceof TextView) {
+                //设置颜色
+                int resouseId;
+                TextView textView = (TextView) view.getChildAt(i);
+                if (white) {
+                    resouseId = Color.BLACK;
+                } else {
+                    resouseId = Color.WHITE;
+                }
+                textView.setTextColor(resouseId);
+            }
+
+
+        }
+
+
+    }
 }

@@ -43,8 +43,8 @@ public class IAsyncTask extends AsyncTask<String,Void,String>{
             URL url =   new URL(path);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection() ;
             connection.setRequestMethod("GET");
-            connection.setConnectTimeout(20000);
-            connection.setReadTimeout(20000);
+            connection.setConnectTimeout(2000000);
+            connection.setReadTimeout(2000000);
             if(connection.getResponseCode() == 200){
                 inputStream =  connection.getInputStream() ;
                 result =  StringUtils.inputStreamToString(inputStream);
